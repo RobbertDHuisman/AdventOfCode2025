@@ -5,10 +5,10 @@ class IdChecker():
         self.valid_ids_2 = []
         self.invalid_ids = []
         self.invalid_ids_2 = []
-        self.check_id_in_range(self.id_ranges)
+        self.check_id_in_range()
 
-    def check_id_in_range(self, id_ranges):
-        for id_range in id_ranges:
+    def check_id_in_range(self):
+        for id_range in self.id_ranges:
             start, end = map(str, id_range.split("-"))
             self.check_if_ids_valid(start, end)
             self.check_all_patterns(start, end)
